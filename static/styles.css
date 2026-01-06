@@ -49,6 +49,10 @@ table {
 	border-spacing: 0;
 }
 
+button, input {
+  font-family: inherit;
+}
+
 :root {
   /* Text sizes */
   /* 1 rem = 16px since it is relative to the html base, which is 16px by default */
@@ -59,6 +63,10 @@ table {
   --text-size-xl: 2rem; /* 32px */
   --text-size-xxl: 4rem; /* 64px */
 
+  --padding-sm: 0.25rem;
+  --padding-md: 0.5rem;
+  --padding-lg: 1rem;
+
   /* Font weights */
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -66,13 +74,28 @@ table {
   --font-weight-bold: 700;
 
   --border-radius-s: 0.25rem;
-  --border-radius-m: 0.5rem
+  --border-radius-m: 0.5rem;
   --border-radius-lg: 0.75rem;
 
   /* Colors */
-  --text-color-dark: #050505;
-  --text-color-light: #fdfdfd;
-  --text-muted: #cccccc;
+  --text-color-dark: #1F2937;
+  --text-color-light: #F9FAF8;
+  --text-muted-light: #cccccc;
+
+  --color-btn-primary: #3882F6;
+  --color-btn-primary-hover: #296ddb;
+  --color-btn-primary-text: #fff;
+  --color-btn-primary-border: #ffffff00;
+
+  --color-btn-secondary: #F3F4F6;
+  --color-btn-secondary-hover: #d0d1d1;
+  --color-btn-secondary-text: #1F2937;
+  --color-btn-secondary-border: #000;
+
+  --color-bg-primary: #1F2937;
+  --color-bg-section: #E5E7EB;
+  --color-bg-alt: #ffffff;
+
 }
 
 html{
@@ -110,5 +133,75 @@ p {
 
 small {
   font-size: var(--text-size-sm);
-  color: var(--text-muted);
+  color: var(--text-muted-light);
+}
+
+.text-primary{
+  color: var(--text-color-light);
+}
+
+.text-secondary{
+  color: var(--text-color-dark);
+}
+
+.text-muted{
+  color: var(--text-muted-light);
+}
+
+.btn{
+  font-size: var(--text-size-md);
+  padding: var(--padding-md) var(--padding-lg);
+  border: none;
+  border-radius: var(--border-radius-s);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-primary{
+  background-color: var(--color-btn-primary);
+  color: var(--color-btn-primary-text);
+  border: 1px solid var(--color-btn-primary-border);
+}
+
+.btn-primary:hover{
+  background-color: var(--color-btn-primary-hover);
+}
+
+.btn-secondary{
+  background-color: var(--color-btn-secondary);
+  color: var(--color-btn-secondary-text);
+  border: 1px solid var(--color-btn-secondary-border);
+}
+
+.btn-secondary:hover{
+  background-color: var(--color-btn-secondary-hover);
+}
+
+header{
+  padding: 0 1rem;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero{
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+  height: auto;
+}
+
+footer{
+  background-color: var(--color-bg-primary);
+}
+
+footer p{
+  margin-bottom: 0;
+  text-align: center;
 }
