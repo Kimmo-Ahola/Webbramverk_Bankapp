@@ -1,10 +1,12 @@
 <header>
-    <nav class="text-primary">
-        Your navbar logo here
-        <ul>
-            <li><a href="{{url_for('home')}}">Home</a></li>
-            <li><a href="{{url_for('home')}}">About Us</a></li>
-            <li><a href="{{url_for('home')}}">Contact Us</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="text-primary">
+            <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='assets/images/bank-logo.png')}}" alt="bank logo"></a>
+            <ul>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('home')}}">About Us</a></li>
+                <li><a href="{{url_for('home')}}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
