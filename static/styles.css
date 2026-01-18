@@ -491,6 +491,49 @@ form textarea:active{
   height: 100%;
 }
 
+/* For flash messages */
+.flash {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-color: #e6fffa;
+    text-align: center;
+}
+
+.flash.success {
+    color: #065f46;
+}
+
+.flash.error {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+}
+
+/* For a modal that pops up, like for deleting an object  */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* We place the modal in the center of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* We make the popup button white with rounded corners */
+.modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* We use this to toggle visibility by adding/removing the class */
+.hidden {
+    display: none;
+}
+
 @media (min-width: 576px) {
   header nav{
     justify-content: space-between;
