@@ -101,6 +101,11 @@ button, input {
   --color-btn-secondary-text: #1F2937;
   --color-btn-secondary-border: #000;
 
+  --color-btn-danger: #e91d1d;
+  --color-btn-danger-hover: #a10b0b;
+  --color-btn-danger-text: #fff;
+  --color-btn-danger-border: #ffffff00;
+
   --color-bg-primary: #1F2937;
   --color-bg-section: #E5E7EB;
   --color-bg-alt: #ffffff;
@@ -204,6 +209,16 @@ a.btn.btn-primary{
 
 .btn-secondary:hover{
   background-color: var(--color-btn-secondary-hover);
+}
+
+.btn-danger{
+  background-color: var(--color-btn-danger);
+  color: var(--color-btn-primary-text);
+  border: 1px solid var(--color-btn-danger-border);
+}
+
+.btn-danger:hover{
+  background-color: var(--color-btn-danger-hover);
 }
 
 header nav{
